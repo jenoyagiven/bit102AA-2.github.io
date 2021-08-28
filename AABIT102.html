@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIT102HM</title>
+  <style>
+     div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: #c40c0c;
+        border-radius: 25px;
+        resize: horizontal;
+        overflow: auto;
+        font-family: newFont;
+        cursor:crosshair
+      }
+
+    .Animation{
+      animation: leftRight;
+      animation-duration: 5s;
+        animation-iteration-count: 2s;
+    }
+
+    @keyframes leftRight {
+        0% {
+          left: 0px;
+        }
+        50% {
+          left: 200px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+  </style>
+</head>
+<body>
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = "yellow"
+    }
+
+    function Alert(){
+      alert("this is an alert")
+    }
+
+    function animation(){
+      document.getElementById('a').className = 'Animation';
+    }
+  </script>
+
+  <!-- Date -->
+  <button type="button" onclick="document.getElementById('Date').innerHTML = Date()">Click to show date</button>
+  <p id = "Date"></p>
+  <br>
+  <!-- Font Change -->
+  <button type="button" onclick= "document.getElementById('Font').innerHTML = 'this is changed'" >Click to change sentence</button>
+  <p id = "Font">this is not changed</p>
+  <button type="button" onclick= changeColor() >Click to change background</button>
+  <br>
+  <br>
+  <button onclick=Alert()>Press this to alert</button>
+  <br>
+  <br>
+
+  <div id="a"></div>
+  <br>
+  
+  <button type="button" onclick=animation()>button</button>
+
+
+
+
+</body>
+</html>
