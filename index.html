@@ -50,6 +50,10 @@
     function animation(){
       document.getElementById('a').className = 'Animation';
     }
+
+    function changeText() {
+      document.getElementById('Font').innerHTML = 'this is changed'
+    }
   </script>
 
   <!-- Date -->
@@ -57,7 +61,7 @@
   <p id = "Date"></p>
   <br>
   <!-- Font Change -->
-  <button type="button" onclick= "document.getElementById('Font').innerHTML = 'this is changed'" >Click to change sentence</button>
+  <button type="button" onclick= changeText()>Click to change sentence</button>
   <p id = "Font">this is not changed</p>
   <button type="button" onclick= changeColor() >Click to change background</button>
   <br>
